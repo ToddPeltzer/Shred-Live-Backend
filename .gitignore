@@ -1,0 +1,6 @@
+settings.sql
+Pipfile.lock
+.vscode
+**/__pycache__
+*.pyc
+baddie.txt
