@@ -16,18 +16,18 @@ class Beach(models.Model):
 class Post(models.Model):
     user = models.CharField(max_length=100)
     body = models.TextField()
-    date = models.CharField(max_length=100)
-    image = models.CharField(max_length=100)
+    date = models.DateTimeField()
+    image = models.TextField(blank = True)
     beach = models.ForeignKey(Beach, on_delete=models.CASCADE, related_name='posts')
 
     def __str__(self):
         return self.user
     
-class User(models.Model):
-    username = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    posts = models.CharField(max_length=100)
-    images_uploaded = models.TextField()
+# class User(models.Model):
+#     username = models.CharField(max_length=100)
+#     password = models.CharField(max_length=100)
+#     posts = models.CharField(max_length=100)
+#     images_uploaded = models.TextField()
 
-    def __str__(self):
-        return self.username
+#     def __str__(self):
+#         return self.username
