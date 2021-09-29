@@ -5,4 +5,3 @@ from .models import Beach, Post
 
 admin.site.register(Beach)
 admin.site.register(Post)
-# admin.site.register(User)

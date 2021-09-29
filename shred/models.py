@@ -4,7 +4,7 @@ from django.db.models.fields import CharField
 # Create your models here.
 
 class Beach(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     image_url = models.TextField()
     description = models.TextField()
@@ -15,6 +15,7 @@ class Beach(models.Model):
         return self.name
 
 class Post(models.Model):
+    id = models.AutoField(primary_key=True)
     user = models.CharField(max_length=100)
     body = models.TextField()
     date = models.DateTimeField()
@@ -23,12 +24,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.user
-    
-# class User(models.Model):
-#     username = models.CharField(max_length=100)
-#     password = models.CharField(max_length=100)
-#     posts = models.CharField(max_length=100)
-#     images_uploaded = models.TextField()
-
-#     def __str__(self):
-#         return self.username
