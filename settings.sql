@@ -1,3 +1,0 @@
-CREATE DATABASE shred;
-CREATE USER shreduser WITH PASSWORD 'shred';
-GRANT ALL PRIVILEGES ON DATABASE shred TO shreduser;
