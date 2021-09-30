@@ -1,1 +1,1 @@
-web: gunicorn shred-live-backend.wsgi
+web: gunicorn shred_django.wsgi
