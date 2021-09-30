@@ -18,7 +18,7 @@ class Post(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.CharField(max_length=100)
     body = models.TextField()
-    date = models.DateTimeField()
+    date = models.DateField(auto_now=True)
     image = models.TextField(blank = True)
     beach = models.ForeignKey(Beach, on_delete=models.CASCADE, related_name='posts')
 
