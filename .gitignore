@@ -1,3 +1,6 @@
+settings.sql
+Pipfile.lock
+
 .env
 *.log
 *.pot
